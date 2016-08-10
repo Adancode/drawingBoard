@@ -7,7 +7,7 @@ var jquery = require('jquery');
 var server = http.createServer(app);
 var io = socketIo.listen(server);
 app.listen(process.env.PORT || 8080);
-server.listen(8080);
+//server.listen(8080);
 
 app.use(express.static(__dirname + '/public'));
 console.log("Server running on 127.0.0.1:8080");
