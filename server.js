@@ -3,10 +3,11 @@ var app = express();
 var http = require('http');
 var socketIo = require('socket.io')
 var jquery = require('jquery');
+var port = process.env.PORT || 8080;
 
 var server = http.createServer(app);
 var io = socketIo.listen(server);
-app.listen(process.env.PORT || 8080);
+app.listen(port);
 //server.listen(8080);
 
 app.use(express.static(__dirname + '/public'));
